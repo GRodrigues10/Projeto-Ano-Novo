@@ -1,17 +1,16 @@
-.App{
-    min-height: 100vh;
+.App {
+    height: 100vh;
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
-  
+    overflow: hidden;
 }
 
-.container{
-    min-width:100vw;
-    /* min-width: 50%; */
+.container {
+    min-width: 100vw; /* Ajustado para não ocupar 100% da viewport por padrão */
     min-height: 400px;
     background-color: rgba(255, 255, 255, 0.575);
     border: 1px solid black;
@@ -22,10 +21,73 @@
     font-weight: bold;
 }
 
-.countdown-container{
+.countdown-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200px;
-    gap: 2rem;
+    flex-wrap: wrap; /* Permite que os itens quebrem linha */
+    gap: 2rem; /* Espaçamento padrão */
+    max-width: 100%; /* Garante que o conteúdo não ultrapasse o contêiner */
+}
+
+/* Media queries para ajuste de layout em telas menores */
+
+/* Para telas menores que 320px */
+@media screen and (max-width: 320px) {
+    .container {
+        width: 90vw;
+        padding: 1rem;
+    }
+    
+    .countdown-container {
+        gap: 0.5rem; /* Espaçamento menor para telas muito pequenas */
+    }
+}
+
+/* Para telas entre 320px e 480px */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .container {
+        width: 90vw;
+        padding: 1rem;
+    }
+    
+    .countdown-container {
+        gap: 1rem; /* Espaçamento reduzido */
+    }
+}
+
+/* Para telas entre 480px e 768px */
+@media screen and (min-width: 480px) and (max-width: 768px) {
+    .container {
+        width: 80vw;
+        padding: 1.5rem;
+    }
+    
+    .countdown-container {
+        gap: 1.5rem; /* Espaçamento intermediário */
+    }
+}
+
+/* Para telas entre 768px e 1024px */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        width: 70vw;
+        padding: 2rem;
+    }
+    
+    .countdown-container {
+        gap: 2rem; /* Espaçamento padrão */
+    }
+}
+
+/* Para telas maiores que 1024px */
+@media screen and (min-width: 1024px) {
+    .container {
+        width: 100vw; /* Ocupa 100% da largura da viewport em telas grandes */
+        padding: 2rem;
+    }
+    
+    .countdown-container {
+        gap: 2rem; /* Espaçamento padrão */
+    }
 }

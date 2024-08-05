@@ -5,3 +5,26 @@
     font-weight: bold;
     color: black;
 }
+
+/* Mediaquery */
+
+@media screen and (min-width:320px) and (max-width:480px) {
+
+    .title{
+        font-size: 1.3rem;
+
+    }
+    
+}
+
+@media screen and (min-width:481px) and (max-width:769px) {
+
+    .title{
+        font-size: 2rem;
+        
+    }
+    
+}
+
+
+

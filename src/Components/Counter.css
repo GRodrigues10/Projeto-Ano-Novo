@@ -13,3 +13,16 @@
     min-width: 80px;
     text-align: center;
 }
+
+@media screen and (min-width:320px) and (max-width:480px) {
+    .counter-number{
+        background-color: black;
+        color: white;
+        padding: 1rem;
+        border-radius: 0.7rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+        min-width: 40px;
+        text-align: center;
+    }
+}
